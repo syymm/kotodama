@@ -15,7 +15,10 @@ class _SplashScreenState extends State<SplashScreen> {
     // 延迟3秒后导航到主页面
     Future.delayed(const Duration(seconds: 3), () {
       if (mounted) {
-        Navigator.of(context).pushReplacementNamed('/home');
+        Navigator.of(context).pushNamedAndRemoveUntil(
+          '/home',
+          (route) => false, // 清空所有历史页面
+        );
       }
     });
   }
