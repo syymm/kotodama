@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:kotodama/ui/splash_screen.dart'; // 导入 SplashScreen
+import 'package:kotodama/ui/splash_screen.dart';
+import 'ui/login_screen.dart'; 
+
 
 void main() {
   runApp(const MyApp());
@@ -20,6 +22,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const SplashScreen(),
+        '/login': (context) => const LoginScreen(),
         '/home': (context) => const MyHomePage(title: 'Flutter Demo Home Page'),
       },
     );

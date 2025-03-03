@@ -16,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Future.delayed(const Duration(seconds: 3), () {
       if (mounted) {
         Navigator.of(context).pushNamedAndRemoveUntil(
-          '/home',
+          '/login',
           (route) => false, // 清空所有历史页面
         );
       }
