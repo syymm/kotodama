@@ -11,12 +11,6 @@ class LoginScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: IconButton(
-          icon: const Icon(Icons.close, color: Colors.black),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
       ),
       body: SafeArea(
         child: Padding(
@@ -53,8 +47,8 @@ class LoginScreen extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Image.asset(
-                      'assets/images/google_logo.png', // 需要添加Google图标
+                    SvgPicture.asset(
+                      'assets/images/google_logo.svg',
                       height: 24,
                       width: 24,
                     ),
